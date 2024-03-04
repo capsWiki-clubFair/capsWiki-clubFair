@@ -1,0 +1,101 @@
+@import "reset.css";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/** 공통 css */
+*{cursor: default;}
+body{height:100%; margin: 0 auto; background-color: var(--bg);}
+img{display: inline-block;}
+.flex{display: flex; }
+.flex_column{display: flex; flex-direction: column;}
+.body_wrap{padding: 40px 20px 20px 20px;}
+.check_header{margin-bottom: 15px;}
+.blue_color{color: var(--blue);}
+.pointer{cursor: pointer;}
+
+/** 폰트 css */
+.fw_normal{ font-weight: normal;font-stretch: normal;font-style: normal;letter-spacing: normal;}
+.fw_500{ font-weight: 500;font-stretch: normal;font-style: normal;letter-spacing: normal;}
+.fw_bold{ font-weight: bold;font-stretch: normal;font-style: normal;letter-spacing: normal;}
+.fs_11{font-size: 11px;  line-height: 1.45;}
+.fs_13{font-size: 13px;  line-height: 1.38;}
+.fs_15{font-size: 15px;  line-height: 1.33;}
+.fs_17{font-size: 17px;  line-height: 1.35;}
+.fs_20{font-size: 20px;  line-height: 1.25;}
+.fs_24{font-size: 24px;  line-height: 1.21;}
+.fs_35{font-size: 35px; line-height: 1.98;}
+
+html {
+
+    --black: #0d1121;
+    --blue: #124f90;
+    --purple: #7d8cbb;
+    --pink: #bab2b7;
+    --gray: #d9d6d8;
+    --bg: #f5f4f4;
+}
+
+/** 헤더 */
+.header_wrap { color: white; text-align: center; padding: 20px 0;}
+.header_msg{margin-bottom: 30px}
+.header_btm_wrap{display: flex; width: 70%; margin: 0 auto; height: 150px;}
+.search_wrap{width: 100%; text-align: left; height: 50px; margin-right: 20px; display: flex; border-radius: 8px; background-color: white; margin-top: 50px;}
+.search_wrap input{border: none; margin-top:3px; height: 40px; color: var(--black); background: none; padding:5px 5px 5px 10px; box-sizing: border-box; width: 55vh; vertical-align: middle;}
+.search_wrap svg{width: 35px; height: 35px; color:var(--purple);margin: 5px 10px 0 5px; line-height: 50px; cursor: pointer;}
+.header_btm_wrap button{width: 150px; border: none; cursor: pointer; color:var(--purple); border-radius: 8px; height: 50px; vertical-align: middle; margin-top: 50px;}
+.header_btm_wrap button:hover{border: none; cursor: pointer; color: var(--bg); background-color: var(--purple);}
+.keyword_wrap button{margin-right: 15px; border-radius: 18px; width: 120px; height: 40px; border: none; background-color: var(--bg); color: var(--purple); cursor: pointer; }
+.keyword_wrap button:hover{border: none; background-color: var(--purple); color: var(--bg);}
+
+
+/** 메인 */
+.main_introducing_wrap {padding: 50px 50px 50px 60px;}
+.introducing_wrap div{display: block; margin-bottom: 15px;}
+
+
+/** 섹션 */
+.main_section_wrap {padding: 0 50px 50px 60px;}
+.main_section_wrap .section_keyword_wrap{justify-content: space-between; display: flex; margin-bottom: 25px;}
+.main_section_wrap .section_keyword_wrap .btn_wrap{vertical-align: middle;}
+.main_section_wrap .section_keyword_wrap .btn_wrap button{margin: 0 0 0 15px; border-radius: 18px; width: 120px; height: 40px; border: none; background-color: var(--blue); color: var(--gray); cursor: pointer;}
+.main_section_wrap .section_keyword_wrap .btn_wrap button:hover{background-color: var(--gray); color: var(--blue); border: none;}
+.main_section_wrap .index_wrap{background-color: var(--gray); padding: 30px; margin-bottom: 20px;}
+.index_wrap  ol{padding: 25px 25px 25px 40px;}
+.index_wrap li{padding: 10px; cursor: pointer;}
+.index_wrap li:hover{font-size: 19px; font-weight: bold;}
+.index_section_wrap{background-color: white; padding: 30px; margin-bottom: 20px;}
+.index_section_wrap .index_section{padding: 25px 25px 25px 40px;}
+.index_section_wrap span{border-bottom: 1px solid var(--gray);}
+.writer_wrap {margin-bottom: 30px; text-align: right;}
+
+/** 등록 */
+.wiki_register_wrap {padding: 0 50px 50px 60px;}
+.keyword_register{display: flex; margin: 0 0 15px 0;}
+.keyword_register div:nth-child(1) {margin-right: 15px; width: 120px; height: 35px;}
+.writer_register{display: flex; margin: 0 0 15px 0;}
+.writer_register div:nth-child(1) {margin-right: 15px; width: 120px; height: 35px;}
+.password_register{display: flex; margin: 0 0 30px 0;}
+.password_register div:nth-child(1) {margin-right: 15px; width: 120px; height: 35px;}
+.register_section_wrap {margin-bottom: 50px; border-radius: 8px; border: 1px solid var(--gray); padding: 20px 20px 20px 30px;}
+.wiki_register_wrap button{margin: 0 auto; border-radius: 8px; width: 150px; height: 50px; color: var(--blue); background-color: var(--gray); border: none; cursor: pointer;}
+.wiki_register_wrap .btn_wrap{width: 150px; margin: 0 auto;}
+
+/** 수정 */
+.wiki_edit_wrap {padding: 0 50px 50px 60px;}
+.keyword_edit{display: flex; margin: 0 0 15px 0;}
+.keyword_edit div:nth-child(1) {margin-right: 15px; height: 35px;}
+.writer_edit{display: flex; margin: 0 0 30px 0;}
+.writer_edit div:nth-child(1) {margin-right: 15px; height: 35px;}
+.password_register{display: flex; margin: 0 0 30px 0;}
+.password_register div:nth-child(1) {margin-right: 15px; width: 120px; height: 35px;}
+.edit_section_wrap {margin-bottom: 50px; border-radius: 8px; border: 1px solid var(--gray); padding: 20px 20px 20px 30px;}
+.wiki_edit_wrap button{margin: 0 auto; border-radius: 8px; width: 150px; height: 50px; color: var(--blue); background-color: var(--gray); border: none; cursor: pointer;}
+.wiki_edit_wrap .btn_wrap{width: 150px; margin: 0 auto;}
+
+/** 수정내역 */
+.history_modal{position: fixed; top:50%; left: 50%; transform: translate(-50%,-50%); background-color: var(--bg); padding: 20px; border: 1px solid var(--black); box-shadow: 0 4px 8px rgba(0,0,0,0.1); z-index: 1000; overflow-y: auto;}
+.history_modal_backdrop{position:fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 999;}
+.history_modal_header{display:flex; justify-content: space-between;}
+.history_modal table {width: 100%; border-collapse: collapse; margin-top: 20px;}
+.history_modal tr{text-align: center;}
+.history_modal th, .history_modal td {text-align: left; padding: 8px; border-bottom: 1px solid #ddd;}
+.history_modal th {background-color: #f8f9fa;}
