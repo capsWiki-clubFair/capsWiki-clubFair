@@ -1,0 +1,36 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Ignore dbsettings.properties
+capsWiki/src/main/resources/dbsettings.properties
+
+#Ignore oauthsettings.properties
+capsWiki/src/main/resources/application-oauth.properties
+
+*.idea
+*.iml
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+capsWiki/.gradle
+capsWiki/build
+capsWiki/out
+
+# miscg
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
