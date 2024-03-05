@@ -108,7 +108,7 @@ const Header = () => {
             : /* 모바일 환경 */
             <div className='m_main_wrap' style={{width:"767px", height:550, backgroundImage: `url(${backgroundImg})`, backgroundSize: '100% 100%', backgroundPosition: 'center'}}>
                 <div className='m_header_wrap'>
-                    <h1 className='fw_bold fs_35 header_msg'>동박 위키</h1>
+                    <h1 className='fw_bold fs_35 header_msg'>동박 위키 - 모바일</h1>
                     <h3 className='fw_500 fs_20'>어서오세요- 동박위키 입니다.</h3>
                     <div className='m_header_btm_wrap'>
                         <img onClick={handleMain} alt='logo' src={logo} width={250} style={{marginRight: '20px', cursor:'pointer'}}/>
