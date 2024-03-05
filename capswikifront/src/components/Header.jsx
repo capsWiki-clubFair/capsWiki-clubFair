@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import backgroundImg from '../assets/images/KakaoTalk_20240304_135923848_01.png';
 
+import { useMediaQuery } from 'react-responsive' //반응형 모듈
+
+
 const Header = () => {
     const navigate = useNavigate();
     const [data, setData] = useState([]); // 서버로부터 받아온 키워드 저장할 상태
@@ -63,11 +66,15 @@ const Header = () => {
         navigate(`/${title}`);
     };
 
+
+    const isDesktopOrMobile = useMediaQuery({query: '(max-width:768px)'}); //최대 화면이 768px이면 true반환
+
     return (
         <>
+        {isDesktopOrMobile !== false ?  /* PC 환경 */
             <div className='main_wrap' style={{height:550, backgroundImage: `url(${backgroundImg})`, backgroundSize: '100% 100%', backgroundPosition: 'center'}}>
                 <div className='header_wrap'>
-                    <h1 className='fw_bold fs_35 header_msg'>동박 위키 Test</h1>
+                    <h1 className='fw_bold fs_35 header_msg'>동박 위키</h1>
                     <h3 className='fw_500 fs_20'>어서오세요- 동박위키 입니다.</h3>
                     <div className='header_btm_wrap'>
                         <img onClick={handleMain} alt='logo' src={logo} width={250} style={{marginRight: '20px', cursor:'pointer'}}/>
@@ -97,6 +104,41 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
+            : /* 모바일 환경 */
+            <div className='m_main_wrap' style={{width:"767px", height:550, backgroundImage: `url(${backgroundImg})`, backgroundSize: '100% 100%', backgroundPosition: 'center'}}>
+                <div className='m_header_wrap'>
+                    <h1 className='fw_bold fs_35 header_msg'>동박 위키</h1>
+                    <h3 className='fw_500 fs_20'>어서오세요- 동박위키 입니다.</h3>
+                    <div className='m_header_btm_wrap'>
+                        <img onClick={handleMain} alt='logo' src={logo} width={250} style={{marginRight: '20px', cursor:'pointer'}}/>
+                        <div className='m_search_wrap'>
+                            <MdOutlineSearch
+                                width={50} height={50}
+                                style={{verticalAlign:'middle'}}
+                                onClick={handleSearch}
+                            />
+                            <div style={{height: '50px'}}>
+                                <input type='text'
+                                       placeholder='검색'
+                                       style={{cursor:'text'}}
+                                       onChange={handleChangeSearch}
+                                       value={searchTitle}
+                                       onKeyPress={handleSearch}/>
+                            </div>
+                        </div>
+                        <div className='m_random_btn' style={{width: '30px' , height: '30px'}}>
+                            <button className='fw_bold fs_13' onClick={handleRandomPage}>랜덤검색</button>
+                        </div>
+                    </div>
+                    <div className='m_keyword_wrap fs_17 fw_bold'>
+                        {data.slice(0, 6).map((item, index) => (
+                            <button key={index} onClick={() => handleNavigateToPost(item.title)}>{item.title}</button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        }
         </>
     );
 };

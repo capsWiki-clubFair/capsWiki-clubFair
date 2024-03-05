@@ -47,6 +47,18 @@ html {
 .keyword_wrap button:hover{border: none; background-color: var(--purple); color: var(--bg);}
 
 
+.m_header_wrap { color: white; text-align: center; padding: 20px 0;}
+.m_header_msg{margin-bottom: 30px}
+.m_header_btm_wrap{display: flex; width: 70%; margin: 0 auto; height: 150px;}
+.m_search_wrap{width: 100%; text-align: left; height: 50px; margin-right: 20px; display: flex; border-radius: 8px; background-color: white; margin-top: 50px;}
+.m_search_wrap input{border: none; margin-top:3px; height: 40px; color: var(--black); background: none; padding:5px 5px 5px 10px; box-sizing: border-box; width: 55vh; vertical-align: middle;}
+.m_search_wrap svg{width: 35px; height: 35px; color:var(--purple);margin: 5px 10px 0 5px; line-height: 50px; cursor: pointer;}
+.m_header_btm_wrap button{width: 150px; border: none; cursor: pointer; color:var(--purple); border-radius: 8px; height: 50px; vertical-align: middle; margin-top: 50px;}
+.m_header_btm_wrap button:hover{border: none; cursor: pointer; color: var(--bg); background-color: var(--purple);}
+.m_keyword_wrap button{margin-right: 15px; border-radius: 18px; width: 120px; height: 40px; border: none; background-color: var(--bg); color: var(--purple); cursor: pointer; }
+.m_keyword_wrap button:hover{border: none; background-color: var(--purple); color: var(--bg);}
+
+
 /** 메인 */
 .main_introducing_wrap {padding: 50px 50px 50px 60px;}
 .introducing_wrap div{display: block; margin-bottom: 15px;}

@@ -1,12 +1,17 @@
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 
+
+import { useMediaQuery } from 'react-responsive' ; //반응형 모듈
+
+
 const MainPage = () => {
     const navigate = useNavigate();
 
     const handleRegister = () => {
         navigate('/register')
     }
+
     return (
         <div className='main_introducing_wrap'>
             <h3 className='fw_bold fs_24 check_header'>대문</h3>
